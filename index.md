@@ -15,7 +15,7 @@ This is my little corner of the internet. I use it for things that deserve a hom
 
 - [Resume](/about/)
 - [OpenSilicon](/opensilicon/)
-- [Projects(/projects/)
+- [Projects](/projects/)
 - [Writing](/writing/)
 
 ## Recently
