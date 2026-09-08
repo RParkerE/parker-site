@@ -13,8 +13,9 @@ This is my little corner of the internet. I use it for things that deserve a hom
 
 ## Currently
 
+- [Resume](/about/)
 - [OpenSilicon](/opensilicon/)
-- [Projects & resume](/projects/)
+- [Projects(/projects/)
 - [Writing](/writing/)
 
 ## Recently
