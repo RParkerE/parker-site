@@ -22,7 +22,7 @@ Outside of engineering, I enjoy **travel, hiking, camping, skiing, reading, and 
 
 ## Resume
 
-[**View my resume (PDF)**](/assets/resume.pdf)
+[**View my resume (PDF)**](/parker-site/assets/resume.pdf)
 
 The link above opens the PDF directly in your browser. You can also download it from the PDF viewer if you need a copy.
 

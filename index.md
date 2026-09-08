@@ -13,10 +13,10 @@ This is my little corner of the internet. I use it for things that deserve a hom
 
 ## Currently
 
-- [Resume](/about/)
-- [OpenSilicon](/opensilicon/)
-- [Projects](/projects/)
-- [Writing](/writing/)
+- [Resume](/parker-site/about/)
+- [OpenSilicon](/parker-site/opensilicon/)
+- [Projects](/parker-site/projects/)
+- [Writing](/parker-site/writing/)
 
 ## Recently
 
