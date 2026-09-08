@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenSilicon — Parker's Place</title>
+  <meta name="description" content="Engineering, writing, projects, and things worth keeping.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="site-title"><a href="/">Parker's Place</a></div>
+      <div class="site-subtitle">engineering · writing · projects</div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">home</a>
+        <a href="/about/">about</a>
+        <a href="/projects/">projects</a>
+        <a href="/writing/">writing</a>
+        <a href="/opensilicon/">opensilicon</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <h1 id="opensilicon">OpenSilicon</h1>
+
+<p><strong>Open-source semiconductor fabrication.</strong></p>
+
+<p>OpenSilicon is an attempt to make practical semiconductor fabrication more accessible to hobbyists, educators, researchers, and small organizations.</p>
+
+<h2 id="progress">Progress</h2>
+
+<p><strong>Overall:</strong> <code class="language-plaintext highlighter-rouge">██████░░░░</code> <strong>In development</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Area</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spin coating</td>
+      <td><strong>Complete</strong></td>
+    </tr>
+    <tr>
+      <td>Optical lithography</td>
+      <td><strong>Active</strong></td>
+    </tr>
+    <tr>
+      <td>X-Y-Z stage</td>
+      <td><strong>Active</strong></td>
+    </tr>
+    <tr>
+      <td>OPU control electronics</td>
+      <td><strong>Active</strong></td>
+    </tr>
+    <tr>
+      <td>Metrology</td>
+      <td><strong>In development</strong></td>
+    </tr>
+    <tr>
+      <td>Process development</td>
+      <td><strong>In development</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="current-work">Current work</h2>
+
+<p>The current lithography work is building on the work of <strong>Edwin En-Te Hwu and Anja Boisen</strong> in <a href="https://doi.org/10.1021/acssensors.8b00340"><em>Hacking CD/DVD/Blu-ray for Biosensing</em></a>, <em>ACS Sensors</em> 3(7), 1222–1232 (2018). Their paper describes the construction and control of several commercial optical pickup units (OPUs), including a KEM 410 unit, and provides supporting controller-circuit designs. The authors describe Blu-ray OPUs as using a 405 nm laser and a high-NA objective, with the optical system capable of approximately 250 nm full-width-at-half-maximum spot size under the conditions discussed in the review.</p>
+
+<p>I have purchased a <strong>KEM410CCA</strong>, which is related to but not identical to the KEM410A/KEM410 unit discussed in the paper. I am adapting the published approach rather than assuming the pinout and electrical behavior are identical, and am reverse engineering the OPU alongside the controller design.</p>
+
+<p>The starting point for the controller is a rough adaptation of the KEM410 circuit shown in the paper’s Supporting Information. The working circuit reference is available here rather than embedded directly in the page:</p>
+
+<p><a href="/images/kem410.png"><strong>KEM410 controller circuit — kem410.png</strong></a></p>
+
+<p>The paper’s Supporting Information contains the triple-wavelength OPU controller circuit designs, and the paper acknowledges <strong>Chung-Hsiang Cheng</strong> and <strong>Christian Werner</strong> for the OPU driving-circuit design. A 2022 correction to the paper subsequently added a citation to the original source of the circuit diagrams, <em>Hacking the PHR-803T Home Page</em> by Diyouware.</p>
+
+<p>The immediate goal is to establish reliable control of the OPU’s laser, photodiode/PDIC signals, and voice-coil actuators, then integrate the optical head into a controlled lithography system. The research literature also demonstrates the suitability of Blu-ray optical heads for low-cost laser lithography, including the work of Rothenbach and Gupta on using a Blu-ray optical head assembly for high-resolution laser lithography.</p>
+
+<p>Alongside the optical work, I am developing the <strong>X-Y-Z motion stage</strong> that will position the substrate relative to the optical head. The eventual system needs the optical head, motion system, exposure control, and process chemistry to behave as one instrument rather than as separate experiments.</p>
+
+<h2 id="latest-opensilicon-posts">Latest OpenSilicon posts</h2>
+
+<p>No OpenSilicon posts yet.</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="https://github.com/RParkerE/OpenSilicon">OpenSilicon GitHub</a></li>
+  <li><a href="#roadmap">Project roadmap</a></li>
+  <li><a href="https://github.com/RParkerE/OpenSilicon/discussions">GitHub Discussions</a></li>
+</ul>
+
+<h2 id="roadmap">Roadmap</h2>
+
+<p>The roadmap will remain deliberately lightweight and will evolve as the system moves from individual components toward an integrated fabrication tool.</p>
+
+<h3 id="spin-coater--complete">Spin coater — Complete</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Spin-coating hardware</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Initial operation and testing</li>
+</ul>
+
+<h3 id="lithography--active">Lithography — Active</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />KEM410CCA controller and pin characterization</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Laser control and power characterization</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />OPU focus / tracking / tilt characterization</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Optical alignment</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Exposure characterization</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Resist/process characterization</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />First repeatable lithography test structures</li>
+</ul>
+
+<p>The lithography approach is informed by the Blu-ray OPU literature, particularly the 405 nm optical architecture described by Hwu and Boisen and the earlier demonstration of low-cost laser lithography using a Blu-ray optical head by Rothenbach and Gupta.</p>
+
+<h3 id="x-y-z-stage--active">X-Y-Z stage — Active</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Mechanical design</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />X/Y motion</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Z/focus positioning</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Position feedback</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Software control</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Integrate motion with exposure</li>
+</ul>
+
+<h3 id="metrology--in-development">Metrology — In development</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Optical inspection workflow</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Calibration structures</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Measurement and repeatability testing</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Integrate Fourier ptychography / optical metrology</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li>
+    <p>Hwu, E. E.-T.; Boisen, A. <strong>Hacking CD/DVD/Blu-ray for Biosensing.</strong> <em>ACS Sensors</em> <strong>2018</strong>, <em>3</em> (7), 1222–1232. <a href="https://doi.org/10.1021/acssensors.8b00340">doi:10.1021/acssensors.8b00340</a>. The paper’s Supporting Information includes triple-wavelength OPU controller circuit designs.</p>
+  </li>
+  <li>
+    <p>Hwu, E. E.-T.; Boisen, A. <strong>Correction to Hacking CD/DVD/Blu-ray for Biosensing.</strong> <em>ACS Sensors</em> <strong>2022</strong>, <em>7</em>, 2492. <a href="https://doi.org/10.1021/acssensors.2c01529">doi:10.1021/acssensors.2c01529</a>. The correction adds a citation to the original source of the circuit diagrams and corrects values in the original article’s table.</p>
+  </li>
+  <li>
+    <p>Rothenbach, C. A.; Gupta, M. C. <strong>High Resolution, Low Cost Laser Lithography Using a Blu-ray Optical Head Assembly.</strong> <em>Optics &amp; Laser Technology</em> <strong>2012</strong>, <em>50</em>, 900–904. <a href="https://doi.org/10.1016/j.optlaseng.2011.12.004">doi:10.1016/j.optlaseng.2011.12.004</a>.</p>
+  </li>
+</ol>
+
+<p>Circuit-design acknowledgement: Hwu and Boisen thank <strong>Chung-Hsiang Cheng</strong> and <strong>Christian Werner</strong> for the OPU driving-circuit design. The 2022 correction identifies <em>Hacking the PHR-803T Home Page</em> (Diyouware) as the original source for the circuit diagrams.</p>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Parker</span>
+      <span>·</span>
+      <a href="/feed.xml">rss</a>
+      <span>·</span>
+      <a href="https://github.com/yourusername/parker-site">source</a>
+    </footer>
+  </div>
+</body>
+</html>

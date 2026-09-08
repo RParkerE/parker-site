@@ -1,0 +1,26 @@
+title: "Parker's Place"
+description: "Engineering, writing, projects, and things worth keeping."
+url: "https://example.com"
+baseurl: ""
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+permalink: /writing/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Set this to your real repository once created.
+repository_url: "https://github.com/yourusername/parker-site"

@@ -1,0 +1,147 @@
+:root {
+  --paper: #f6f3e9;
+  --ink: #222;
+  --muted: #666;
+  --link: #0000ee;
+  --visited: #551a8b;
+  --rule: #aaa;
+  --accent: #e8e1c9;
+}
+
+* { box-sizing: border-box; }
+
+html { background: #ddd; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.page {
+  width: min(860px, calc(100% - 28px));
+  margin: 24px auto;
+  padding: 24px 30px 20px;
+  background: #fffdf6;
+  border: 1px solid #999;
+  box-shadow: 2px 2px 0 #aaa;
+}
+
+.site-header {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.site-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.site-title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-subtitle {
+  margin-top: 4px;
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+}
+
+.site-nav {
+  margin-top: 12px;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+}
+
+.site-nav a { margin-right: 14px; }
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 29px;
+  margin: 0 0 18px;
+}
+
+h2 {
+  font-size: 21px;
+  margin-top: 28px;
+}
+
+h3 { font-size: 17px; }
+
+a { color: var(--link); }
+a:visited { color: var(--visited); }
+
+a:hover { background: #ffff99; }
+
+p { max-width: 72ch; }
+
+ul, ol { max-width: 72ch; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 24px 0;
+}
+
+blockquote {
+  margin: 20px 0;
+  padding: 8px 14px;
+  border-left: 4px solid #777;
+  background: var(--accent);
+}
+
+code, pre {
+  font-family: "Courier New", monospace;
+}
+
+pre {
+  padding: 12px;
+  overflow-x: auto;
+  border: 1px solid #bbb;
+  background: #f1f1f1;
+}
+
+.meta {
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  margin: 0 0 8px;
+}
+
+.site-footer {
+  margin-top: 36px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+}
+
+.site-footer span,
+.site-footer a { margin-right: 6px; }
+
+@media (max-width: 600px) {
+  .page {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 18px;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .site-title { font-size: 27px; }
+  .site-nav a { display: inline-block; margin: 0 12px 5px 0; }
+}

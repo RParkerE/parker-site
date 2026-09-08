@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects & Resume — Parker's Place</title>
+  <meta name="description" content="Engineering, writing, projects, and things worth keeping.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="site-title"><a href="/">Parker's Place</a></div>
+      <div class="site-subtitle">engineering · writing · projects</div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">home</a>
+        <a href="/about/">about</a>
+        <a href="/projects/">projects</a>
+        <a href="/writing/">writing</a>
+        <a href="/opensilicon/">opensilicon</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <h1 id="projects">Projects</h1>
+
+<p>A collection of projects I’ve built for learning, experimentation, and the occasional rabbit hole.</p>
+
+<h2 id="autonomous-driving--carla">Autonomous Driving &amp; CARLA</h2>
+
+<p>I have spent significant time using <strong>CARLA</strong> to learn and experiment with the algorithms and systems that make autonomous driving possible. The simulation environment gave me a way to work with vehicle dynamics, cameras, LiDAR and other simulated sensors while building the perception, localization, planning, and control pieces around them.</p>
+
+<p>A large part of this work was learning how the mathematics and algorithms behind autonomous systems fit together in practice. Some of the topics I studied and implemented included:</p>
+
+<ul>
+  <li><strong>Kalman Filtering</strong> for estimating vehicle state from noisy sensor measurements.</li>
+  <li><strong>Bayes’ Theorem and Probabilistic Robotics</strong> for reasoning about uncertain observations and beliefs about the vehicle’s state and environment.</li>
+  <li><strong>Particle Filters / Monte Carlo Localization</strong> for estimating position when the system has uncertainty and nonlinearities that make simpler approaches insufficient.</li>
+  <li><strong>SLAM (Simultaneous Localization and Mapping)</strong> for building a representation of the environment while simultaneously estimating the vehicle’s location within it.</li>
+  <li><strong>Homogeneous Transformations</strong> for representing and transforming positions and orientations between coordinate frames, an essential part of working with multiple sensors and vehicle geometry.</li>
+  <li><strong>Vision Transformers (ViTs)</strong> and <strong>BEVFormer-style architectures</strong> for learning about modern vision-based perception and bird’s-eye-view representations of the driving environment.</li>
+  <li><strong>Dijkstra’s algorithm</strong> for graph-based path planning and finding shortest paths through a representation of the environment.</li>
+  <li><strong>Model Predictive Control (MPC)</strong> for vehicle trajectory tracking and control while considering the vehicle’s dynamics and future state.</li>
+</ul>
+
+<p>What I found particularly interesting was seeing how these pieces connect. Sensor measurements become estimates through filtering and probabilistic reasoning; coordinate transformations allow those measurements to be combined; perception produces an understanding of the surrounding environment; localization determines where the vehicle is within that environment; planning determines where it should go; and control algorithms such as MPC turn that plan into actual vehicle motion.</p>
+
+<p>CARLA made it possible to experiment with this entire pipeline in a controlled environment and to see how changes in one part of the system propagate through the rest of the autonomy stack.</p>
+
+<h2 id="for-fun--learning">For Fun &amp; Learning</h2>
+
+<p>A collection of smaller projects and experiments covering software, hardware, automation, and whatever else I happen to be interested in.</p>
+
+<p><a href="https://github.com/RParkerE/ForFun"><strong>ForFun →</strong></a></p>
+
+<h2 id="monkey-business">Monkey Business</h2>
+
+<p>Projects and experiments based on Thorston Bell’s books, exploring programming and problem solving through the exercises and ideas presented there.</p>
+
+<p><a href="https://github.com/RParkerE/MonkeyBusiness"><strong>MonkeyBusiness →</strong></a></p>
+
+<h2 id="llm-learning">LLM Learning</h2>
+
+<p>An ongoing project where I am learning about large language models by working through the concepts and implementations from first principles rather than treating them as black boxes.</p>
+
+<p><a href="https://github.com/RParkerE/LLM-Learning"><strong>LLM-Learning →</strong></a></p>
+
+<h2 id="getpoptimesapi">GetPopTimesAPI</h2>
+
+<p>A deprecated project that experimented with scraping Google Places busyness information.</p>
+
+<p><a href="https://github.com/RParkerE/GetPopTimesAPI"><strong>GetPopTimesAPI →</strong></a></p>
+
+<h2 id="magic-lamp">Magic Lamp</h2>
+
+<p>An Arduino project that controls a lamp based on local sunrise and sunset times, using IP-based location information to determine when it should turn on and off.</p>
+
+<p><a href="https://github.com/RParkerE/MagicLamp"><strong>MagicLamp →</strong></a></p>
+
+<h2 id="heart-rate-monitor">Heart Rate Monitor</h2>
+
+<p>A collection of Python scripts for the BeagleBone Black and Raspberry Pi that collect readings and display heart-rate information.</p>
+
+<p><a href="https://github.com/RParkerE/HeartRateMonitor"><strong>HeartRateMonitor →</strong></a></p>
+
+<hr />
+
+<p>More projects will make their way here as I build them.</p>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Parker</span>
+      <span>·</span>
+      <a href="/feed.xml">rss</a>
+      <span>·</span>
+      <a href="https://github.com/yourusername/parker-site">source</a>
+    </footer>
+  </div>
+</body>
+</html>

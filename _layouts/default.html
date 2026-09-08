@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></div>
+      <div class="site-subtitle">engineering · writing · projects</div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}">home</a>
+        <a href="{{ '/about/' | relative_url }}">about</a>
+        <a href="{{ '/projects/' | relative_url }}">projects</a>
+        <a href="{{ '/writing/' | relative_url }}">writing</a>
+        <a href="{{ '/opensilicon/' | relative_url }}">opensilicon</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <span>© {{ 'now' | date: '%Y' }} Parker</span>
+      <span>·</span>
+      <a href="{{ '/feed.xml' | relative_url }}">rss</a>
+      <span>·</span>
+      <a href="{{ site.repository_url | default: 'https://github.com/' }}">source</a>
+    </footer>
+  </div>
+</body>
+</html>
