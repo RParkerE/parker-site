@@ -1,7 +1,7 @@
 title: "Parker's Place"
 description: "Engineering, writing, projects, and things worth keeping."
-url: "https://example.com"
-baseurl: ""
+url: "https://rparkere.github.io"
+baseurl: "/parker-site"
 
 markdown: kramdown
 highlighter: rouge
@@ -22,5 +22,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-# Set this to your real repository once created.
-repository_url: "https://github.com/yourusername/parker-site"
+repository_url: "https://github.com/RParkerE/parker-site"
